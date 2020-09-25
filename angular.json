@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "DA5"
+    }
+  },
+  "defaultProject": "DA5",
+  "cli": {
+    "analytics": "1cb2e5f4-f200-4524-9746-44e64f21da78"
+  }
 }
