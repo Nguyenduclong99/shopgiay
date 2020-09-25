@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './share/header/header.component';
 import { FooterComponent } from './share/footer/footer.component';
-
+import {Router} from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { ShareComponent } from './share/share.component';
 import { ProductComponent } from './product/product.component';
@@ -16,6 +16,7 @@ import { SearchComponent } from './search/search.component';
 import { ModalComponent } from './share/modal/modal.component';
 import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './product/checkout/checkout.component';
+import { MyaccountComponent } from './myaccount/myaccount.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,9 @@ import { CheckoutComponent } from './product/checkout/checkout.component';
 
     LoginComponent,
 
-    CheckoutComponent
+    CheckoutComponent,
+
+    MyaccountComponent
   ],
   imports: [
     BrowserModule,
