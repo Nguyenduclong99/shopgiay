@@ -1,15 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
+import { BaseComponent } from 'src/app/lib/base-component';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  styleUrls: ['./cart.component.css'],
 })
-export class CartComponent implements OnInit {
+export class CartComponent extends BaseComponent implements OnInit {
+  total: any;
+  items: any;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(injector: Injector) {
+    super(injector);
   }
 
+  ngOnInit(): void {
+    this._cart.items.subscribe((res) => {
+      this.items = res;
+      this.total = 0;
+      for (let x of this.items) {
+        x.money = x.quantity_sale * x.price;
+        this.total += x.quantity_sale * x.price;
+      }
+    });
+  }
+  clearCart() {
+    this._cart.clearCart();
+    alert('Xóa thành công!');
+  }
+  addQty(item, quantity_sale) {
+    item.quantity_sale = quantity_sale;
+    item.money = Number.parseInt(item.quantity_sale) * item.price;
+    this._cart.addQty(item);
+  }
 }

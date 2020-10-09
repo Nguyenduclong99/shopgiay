@@ -17,6 +17,9 @@ import { ModalComponent } from './share/modal/modal.component';
 import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './product/checkout/checkout.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import { AboutComponent } from './about/about.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { MyaccountComponent } from './myaccount/myaccount.component';
 
     CheckoutComponent,
 
-    MyaccountComponent
+    MyaccountComponent,
+
+    AboutComponent,
+
   ],
   imports: [
     BrowserModule,
