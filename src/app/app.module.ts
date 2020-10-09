@@ -18,7 +18,8 @@ import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './product/checkout/checkout.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
 import { AboutComponent } from './about/about.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -51,10 +52,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
     AboutComponent,
 
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
