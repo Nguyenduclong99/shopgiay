@@ -20,12 +20,16 @@ import { MyaccountComponent } from './myaccount/myaccount.component';
 import { AboutComponent } from './about/about.component';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoryComponent } from './share/category/category.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     HeaderComponent,
+
     FooterComponent,
 
     MainComponent,
@@ -51,6 +55,9 @@ import { HttpClientModule } from '@angular/common/http';
     MyaccountComponent,
 
     AboutComponent,
+
+    CategoryComponent,
+
 
 
   ],
