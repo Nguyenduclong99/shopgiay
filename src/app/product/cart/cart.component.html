@@ -20,23 +20,24 @@
                                         <tbody>
                                             <tr *ngFor="let i of items">
                                                 <td class="product-thumbnail">
-                                                    <a href="#"><img class="img-responsive" src="assets/images/product-image/mini-cart/1.jpg" alt="" /></a>
+                                                    <a href="#"><img class="img-responsive" src={{i.image}} alt="" /></a>
                                                 </td>
                                                 <td class="product-name"><a href="#">{{ i.name }}</a></td>
-                                                <td class="product-price-cart"><span class="amount">{{ i.price }}</span></td>
+                                                <td class="product-price-cart"><span class="amount">{{ i.unit_price }}</span></td>
                                                 <td class="product-quantity">
                                                     <div class="cart-plus-minus">
                                                       <input class="cart-plus-minus-box" min='1' [max]="i.quantity" type="number" #inp
                                                         name="qtybutton" (change)="addQty(i,inp.value)" [value]="i.quantity_sale" />
                                                     </div>
                                                   </td>
-                                                  <td class="product-subtotal">{{ i.money }}</td>
+                                                  <td class="product-subtotal">{{ i.total }}</td>
                                                   <td class="product-remove">
-                                                    <a href="#"><i class="icon-pencil"></i></a>
-                                                    <a (click)="_cart.deleteItem(i.product_id)"><i class="icon-close"></i></a>
+                                                    <a href="#"><i class="fa fa-pencil-alt"></i></a>
+                                                    <a (click)="_cart.deleteItem(i.product_id)"><i class="fa fa-times"></i></a>
                                                   </td>
                                                 </tr>
-                                            <tr>
+
+                                            <!-- <tr>
                                                 <td class="product-thumbnail">
                                                     <a href="#"><img src="assets/images/product-image/mini-cart/2.jpg" alt="" /></a>
                                                 </td>
@@ -69,7 +70,7 @@
                                                     <a href="#"><i class="fa fa-pencil-alt"></i></a>
                                                     <a href="#"><i class="fa fa-times"></i></a>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>

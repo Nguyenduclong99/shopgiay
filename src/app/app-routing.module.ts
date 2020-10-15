@@ -8,7 +8,7 @@ import { MyaccountComponent } from './myaccount/myaccount.component';
 import { CartComponent } from './product/cart/cart.component';
 import { CheckoutComponent } from './product/checkout/checkout.component';
 import { DetailComponent } from './product/detail/detail.component';
-import { ListItemComponent } from './product/list-item/list-item.component';
+import {ItemListComponent } from './product/item-list/item-list.component'
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
@@ -37,11 +37,11 @@ const routes: Routes = [
     component:MyaccountComponent
   },
   {
-path:'listitem',
-component:ListItemComponent
+path:'item-list/:id',
+component:ItemListComponent
   },
   {
-    path:'detail',
+    path:'detail/:id',
     component:DetailComponent
   },
   {

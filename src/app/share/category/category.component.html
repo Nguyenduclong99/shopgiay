@@ -10,13 +10,13 @@
                             <ul class="vertical-menu-wrap open-menu-toggle">
                                 <ng-container *ngFor="let i of category">
                                     <li *ngIf="i.children != null" class="menu-item">
-                                      <a [routerLink]="['/product/list-item', i.category_id]">{{ i.name }} <i
+                                      <a [routerLink]="['/item-list', i.category_id]">{{ i.name }} <i
                                           class="ion-ios-arrow-right"></i></a>
                                       <ul class="sub-menu sub-menu-2">
                                         <li>
                                           <ul class="submenu-item">
                                             <ng-container *ngFor="let c of i.children">
-                                              <li><a [routerLink]="['/product/list-item', c.category_id]">{{ c.name }}</a></li>
+                                              <li><a routerLink="/item-list/{{c.category_id}}">{{ c.name }}</a></li>
                                             </ng-container>
                       
                                           </ul>
@@ -25,7 +25,7 @@
                                       <!-- sub menu -->
                                     </li>
                                     <li class="menu-item" *ngIf="i.children == null"><a
-                                        [routerLink]="['/product/list-item', i.category_id]">T{{ i.name }}</a></li>
+                                        routerLink="/item-list/{{i.category_id}}">{{ i.name }}</a></li>
                                   </ng-container>
                             </ul>
                         </div>

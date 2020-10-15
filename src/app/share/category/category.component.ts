@@ -15,7 +15,7 @@ export class CategoryComponent extends BaseComponent implements OnInit {
 
   ngOnInit(): void {
     this._api
-      .get('api/category/get-category')
+      .get('api/itemgroup/get-menu')
       .takeUntil(this.unsubscribe)
       .subscribe((res) => {
         this.category = res;

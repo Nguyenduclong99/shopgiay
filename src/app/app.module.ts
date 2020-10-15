@@ -11,7 +11,6 @@ import { ShareComponent } from './share/share.component';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './product/cart/cart.component';
 import { DetailComponent } from './product/detail/detail.component';
-import { ListItemComponent } from './product/list-item/list-item.component';
 import { SearchComponent } from './search/search.component';
 import { ModalComponent } from './share/modal/modal.component';
 import { LoginComponent } from './login/login.component';
@@ -21,7 +20,8 @@ import { AboutComponent } from './about/about.component';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './share/category/category.component';
-
+import { ItemListComponent } from './product/item-list/item-list.component';
+import { ListItemComponent } from './product/list-item/list-item.component';
 
 
 @NgModule({
@@ -40,9 +40,9 @@ import { CategoryComponent } from './share/category/category.component';
 
     CartComponent,
 
-    DetailComponent,
-
     ListItemComponent,
+
+    DetailComponent,
 
     SearchComponent,
 
@@ -57,6 +57,8 @@ import { CategoryComponent } from './share/category/category.component';
     AboutComponent,
 
     CategoryComponent,
+
+    ItemListComponent,
 
 
 

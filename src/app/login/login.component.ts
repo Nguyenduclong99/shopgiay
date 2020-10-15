@@ -1,7 +1,7 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BaseComponent } from 'src/app/lib/base-component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,6 +21,13 @@ export class LoginComponent extends BaseComponent implements OnInit {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
+      ]),
+    });
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.email, Validators.required]),
+      password: new FormControl('', [
+        Validators.minLength(6),
+        Validators.required,
       ]),
       remember: new FormControl(false, []),
     });

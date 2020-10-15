@@ -2,11 +2,11 @@ import { Component, Injector, OnInit } from '@angular/core';
 import { BaseComponent } from 'src/app/lib/base-component';
 
 @Component({
-  selector: 'app-list-item',
-  templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.css'],
+  selector: 'app-item-list',
+  templateUrl: './item-list.component.html',
+  styleUrls: ['./item-list.component.css'],
 })
-export class ListItemComponent extends BaseComponent implements OnInit {
+export class ItemListComponent extends BaseComponent implements OnInit {
   list: any;
   page: any;
   pageSize: any;
@@ -22,7 +22,7 @@ export class ListItemComponent extends BaseComponent implements OnInit {
     this._route.params.subscribe((params) => {
       this.category_id = params['id'];
       this._api
-        .post('api/product/search', {
+        .post('api/item/search', {
           page: this.page,
           pageSize: this.pageSize,
           category_id: this.category_id,
@@ -42,7 +42,7 @@ export class ListItemComponent extends BaseComponent implements OnInit {
     this._route.params.subscribe((params) => {
       let id = params['id'];
       this._api
-        .post('api/product/search', {
+        .post('api/item/search', {
           page: page,
           pageSize: this.pageSize,
           category_id: id,
