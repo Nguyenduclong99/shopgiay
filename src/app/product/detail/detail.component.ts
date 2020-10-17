@@ -23,10 +23,9 @@ export class DetailComponent extends BaseComponent implements OnInit {
           .subscribe((res) => {
             this.product = res;
             console.log(this.product);
-            this.category_id = this.product.category_id;
-            console.log(this.category_id);
+            this.category_id = this.product.catergory_id;
               this._api
-          .get('api/item/get-item-related/' + id + '/' + this.category_id)
+          .get('api/item/get-item-related/' + id + '/' + this.product.catergory_id)
           .takeUntil(this.unsubscribe)
           .subscribe((data) => {
 

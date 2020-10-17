@@ -7,47 +7,47 @@
               <div class="billing-info-wrap">
                 <!-- [formGroup]="hoadonForm" -->
 
-                <h3>Billing Details</h3>
+                <h3>Thông tin người nhận hàng</h3>
                 <div class="row">
                   <div class="col-lg-6 col-md-6">
                     <div class="billing-info mb-20px">
-                      <label>First Name</label>
+                      <label>Họ tên</label>
                       <input formControlName="name" type="text" />
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6">
                     <div class="billing-info mb-20px">
-                      <label>Address</label>
+                      <label>Địa chỉ</label>
                       <input formControlName="address" type="text" />
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="billing-info mb-20px">
-                      <label>Phone</label>
+                      <label>Số điện thoại</label>
                       <input formControlName="phone" type="text" />
                     </div>
                   </div>
-                  <div class="col-lg-12">
+                  <!-- <div class="col-lg-12">
                     <div class="billing-select mb-20px">
-                      <label>Country</label>
+                      <label>Thành phố/ tỉnh</label>
                       <select>
-                        <option>Select a country</option>
-                        <option>Azerbaijan</option>
-                        <option>Bahamas</option>
-                        <option>Bahrain</option>
+                        <option>Hà Nội</option>
+                        <option>Bắc Ninh</option>
+                        <option>Hưng Yên</option>
+                        <option>Thái Bình</option>
                         <option>Bangladesh</option>
                         <option>Barbados</option>
                       </select>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col-lg-12">
                     <div class="billing-info mb-20px">
-                      <label>Street Address</label>
-                      <input class="billing-address" placeholder="House number and street name" type="text" />
-                      <input placeholder="Apartment, suite, unit etc." type="text" />
+                      <label>Địa chỉ</label>
+                      <input class="billing-address" placeholder="Số nhà. Xã/Phường, Quận/Huyện, Tỉnh/Thành Phố " type="text" />
+                      <!-- <input placeholder="Apartment, suite, unit etc." type="text" /> -->
                     </div>
                   </div>
-                  <div class="col-lg-12">
+                  <!-- <div class="col-lg-12">
                     <div class="billing-info mb-20px">
                       <label>Town / City</label>
                       <input type="text" />
@@ -64,16 +64,16 @@
                       <label>Postcode / ZIP</label>
                       <input type="text" />
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col-lg-6 col-md-6">
                     <div class="billing-info mb-20px">
-                      <label>Phone</label>
+                      <label>Số điện thoại</label>
                       <input type="text" />
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6">
                     <div class="billing-info mb-20px">
-                      <label>Email Address</label>
+                      <label>Email</label>
                       <input type="text" />
                     </div>
                   </div>
@@ -88,14 +88,14 @@
                   <button class="btn-hover checkout-btn" type="submit">register</button>
                 </div>
                 <div class="additional-info-wrap">
-                  <h4>Additional information</h4>
+                  <h4>Thông tin thêm</h4>
                   <div class="additional-info">
-                    <label>Order notes</label>
-                    <textarea placeholder="Notes about your order, e.g. special notes for delivery. "
+                    <label>Ghi chú</label>
+                    <textarea 
                       name="message"></textarea>
                   </div>
                 </div>
-                <div class="checkout-account mt-25">
+                <!-- <div class="checkout-account mt-25">
                   <input class="checkout-toggle" type="checkbox" />
                   <label>Ship to a different address?</label>
                 </div>
@@ -170,19 +170,19 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
               </div>
             </div>
             <div class="col-lg-5 mt-md-30px mt-lm-30px ">
               <div class="your-order-area">
-                <h3>Your order</h3>
+                <h3>Thông tin sản phẩm được chọn</h3>
                 <div class="your-order-wrap gray-bg-4">
                   <div class="your-order-product-info">
                     <div class="your-order-top">
                       <ul>
-                        <li>Product</li>
-                        <li>Total</li>
+                        <li>Tên sản phẩm</li>
+                        <li>Thành tiền</li>
                       </ul>
                     </div>
                     <div class="your-order-middle">
@@ -205,12 +205,12 @@
                     </div>
                     <div class="your-order-total">
                       <ul>
-                        <li class="order-total">Total</li>
-                        <li>{{ total }}</li>
+                        <li class="order-total">Tổng tiền</li>
+                        <li>{{total}}</li>
                       </ul>
                     </div>
                   </div>
-                  <div class="payment-method">
+                  <!-- <div class="payment-method">
                     <div class="payment-accordion element-mrg">
                       <div class="panel-group" id="accordion">
                         <div class="panel payment-accordion">
@@ -263,10 +263,10 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="Place-order mt-25">
-                  <button type="submit" class="btn btn-primary">Place Order</button>
+                  <button type="submit" class="btn btn-primary">Đặt hàng</button>
 
                 </div>
               </div>

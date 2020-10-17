@@ -19,8 +19,8 @@ export class CartComponent extends BaseComponent implements OnInit {
       this.items = res;
       this.total = 0;
       for (let x of this.items) {
-        x.money = x.quantity_sale * x.price;
-        this.total += x.quantity_sale * x.price;
+        x.money = x.quantity_sale * x.unit_price;
+        this.total += x.quantity_sale * x.unit_price;
       }
     });
   }
