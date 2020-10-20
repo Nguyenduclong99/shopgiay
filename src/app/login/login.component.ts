@@ -32,7 +32,9 @@ export class LoginComponent extends BaseComponent implements OnInit {
       remember: new FormControl(false, []),
     });
   }
-  onSubmitLogin(value: any) {}
+  onSubmitLogin(value: any) {
+    
+  }
   onSubmitRegister(value: any) {
     this._api
       .post('api/customer/create-item', {
@@ -42,7 +44,8 @@ export class LoginComponent extends BaseComponent implements OnInit {
       .takeUntil(this.unsubscribe)
       .subscribe(
         (res) => {
-          alert('Success');
+          alert('Đăng kí thành công');
+          location.reload();
         },
         (err) => {}
       );

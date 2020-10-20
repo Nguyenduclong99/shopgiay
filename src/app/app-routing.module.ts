@@ -13,7 +13,7 @@ import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'home',
     component:MainComponent
   },
   {
@@ -41,7 +41,7 @@ path:'item-list/:id',
 component:ItemListComponent
   },
   {
-    path:'detail/:id',
+    path:'detail/:id_product',
     component:DetailComponent
   },
   {

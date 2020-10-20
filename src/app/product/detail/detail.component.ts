@@ -16,7 +16,7 @@ export class DetailComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     ((this.product = {}), this.productRelative= []),
       this._route.params.subscribe((params) => {
-        let id = params['id'];
+        let id = params['id_product'];
         this._api
           .get('api/item/get-by-id/' + id)
           .takeUntil(this.unsubscribe)

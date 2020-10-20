@@ -20,16 +20,21 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
     this.hoadonForm = new FormGroup({
       name: new FormControl('', Validators.required),
       address: new FormControl(''),
+      email: new FormControl(''),
       phone: new FormControl(''),
+      note: new FormControl(''),
     });
     this._cart.items.subscribe((res) => {
       this.items = res;
       this.total = 0;
       for (let x of this.items) {
+        x.id_product = this.items.id_product;
         x.quantity_sale = +x.quantity_sale;
         x.money = x.quantity_sale * x.unit_price;
         this.total += x.quantity_sale * x.unit_price;
-        console.log(this.total)
+
+
+        console.log(x.id_product);
       }
     });
   }
@@ -37,12 +42,14 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
     let hoadon = {
       name: value.name,
       address: value.address,
+      email: value.email,
       phone: value.phone,
+      note: value.note,
       total: this.total,
       listjson_chitiet: this.items,
     };
     this._api
-      .post('api/hoadon/create-bill', hoadon)
+      .post('api/hoadon/create-hoa-don', hoadon)
       .takeUntil(this.unsubscribe)
       .subscribe(
         (res) => {

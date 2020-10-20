@@ -24,6 +24,7 @@ export class MainComponent extends BaseComponent implements OnInit {
           // setTimeout(() => {
           //   this.loadScripts();
           // });
+          console.log(this.list_item);
         },
         (err) => {}
       );

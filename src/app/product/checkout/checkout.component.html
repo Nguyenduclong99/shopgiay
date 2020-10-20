@@ -6,7 +6,6 @@
             <div class="col-lg-7">
               <div class="billing-info-wrap">
                 <!-- [formGroup]="hoadonForm" -->
-
                 <h3>Thông tin người nhận hàng</h3>
                 <div class="row">
                   <div class="col-lg-6 col-md-6">
@@ -17,16 +16,16 @@
                   </div>
                   <div class="col-lg-6 col-md-6">
                     <div class="billing-info mb-20px">
-                      <label>Địa chỉ</label>
-                      <input formControlName="address" type="text" />
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="billing-info mb-20px">
                       <label>Số điện thoại</label>
                       <input formControlName="phone" type="text" />
                     </div>
                   </div>
+                  <!-- <div class="col-lg-12">
+                    <div class="billing-info mb-20px">
+                      <label>Số điện thoại</label>
+                      <input formControlName="phone" type="text" />
+                    </div>
+                  </div> -->
                   <!-- <div class="col-lg-12">
                     <div class="billing-select mb-20px">
                       <label>Thành phố/ tỉnh</label>
@@ -43,7 +42,7 @@
                   <div class="col-lg-12">
                     <div class="billing-info mb-20px">
                       <label>Địa chỉ</label>
-                      <input class="billing-address" placeholder="Số nhà. Xã/Phường, Quận/Huyện, Tỉnh/Thành Phố " type="text" />
+                      <input formControlName="address" placeholder="Số nhà. Xã/Phường, Quận/Huyện, Tỉnh/Thành Phố " type="text" />
                       <!-- <input placeholder="Apartment, suite, unit etc." type="text" /> -->
                     </div>
                   </div>
@@ -65,16 +64,16 @@
                       <input type="text" />
                     </div>
                   </div> -->
-                  <div class="col-lg-6 col-md-6">
+                  <!-- <div class="col-lg-6 col-md-6">
                     <div class="billing-info mb-20px">
                       <label>Số điện thoại</label>
                       <input type="text" />
                     </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6">
+                  </div> -->
+                  <div class="col-lg-12 ">
                     <div class="billing-info mb-20px">
                       <label>Email</label>
-                      <input type="text" />
+                      <input  formControlName="email"  type="text" />
                     </div>
                   </div>
                 </div>
@@ -91,8 +90,10 @@
                   <h4>Thông tin thêm</h4>
                   <div class="additional-info">
                     <label>Ghi chú</label>
-                    <textarea 
-                      name="message"></textarea>
+                    <textarea ></textarea>
+                    <input  formControlName="note"  type="text" />
+                      
+                      
                   </div>
                 </div>
                 <!-- <div class="checkout-account mt-25">
