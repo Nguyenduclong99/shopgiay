@@ -32,9 +32,9 @@ export class MainComponent extends BaseComponent implements OnInit {
             }).slice(0, 10);
 
           console.log(this.list_item);
-          this.adidas = res[0].filter((s) => s.catergory_id == 'A1B75AA1-6EEF-4ED4-8CB8-866255F5F8B1').slice(0, 10);
+          this.adidas = res[0].filter((s) => s.catergory_id == 'ACA02F36-D58A-4779-ACC4-B6E8362385D3').slice(0, 10);
           console.log(this.adidas);
-           this.balenciaga = this.list_item.filter((s) => s.catergory_id == "592E87A8-A38B-47DE-AAE0-506425FCA8AB").slice(0, 10);
+           this.balenciaga = this.list_item.filter((s) => s.catergory_id == "987267D4-8B98-4141-B403-9910939CFDE9").slice(0, 10);
            console.log(this.balenciaga);
           // setTimeout(() => {
           //   this.loadScripts();
