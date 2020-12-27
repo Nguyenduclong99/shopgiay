@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="pricing-meta">
                                     <ul>
-                                        <li class="old-price not-cut">{{ product.price }}</li>
+                                        <li class="old-price not-cut">{{ product.promotion_price |number }} VNĐ</li>
                                     </ul>
                                 </div>
                                 <p>{{ product.description }}</p>
@@ -282,9 +282,9 @@
                                 </div>
                                 <div class="pricing-meta">
                                     <ul>
-                                        <li class="old-price">{{p.unit_price}}</li>
-                                        <li class="current-price">{{p.promotion_price}}</li>
-                                        <li class="discount-price">-10%</li>
+                                        <li class="old-price">{{p.unit_price|number }} VNĐ</li>
+                                        <li class="current-price">{{p.promotion_price|number }} VNĐ</li>
+                                        <li class="discount-price">-{{((p.unit_price/p.promotion_price)*10).toFixed(2)}}%</li>
                                     </ul>
                                 </div>
                             </div>
