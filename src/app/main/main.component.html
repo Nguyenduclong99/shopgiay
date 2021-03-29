@@ -263,8 +263,8 @@
                         <div class="product-inner-item">
                             <article class="list-product mb-30px">
                                 <div class="img-block">
-                                    <a href="single-product.html" class="thumbnail">
-                                        <img class="first-img" style ="height: 250px;" src= "assets\images\product-image\shoe\{{item.image}}" alt="" />
+                                    <a  routerLink="/detail/{{item.iD_product}}" class="thumbnail">
+                                        <img class="first-img" style ="height: 250px; width:205px;" src= "assets\images\product-image\shoe\{{item.image}}" alt="" />
                                         <!-- <img class="second-img" src="assets/images/product-image/furniture/7.jpg" alt="" /> -->
                                     </a>
                                     <div class="add-to-link">
@@ -301,7 +301,7 @@
                                         <ul>
                                             <li class="old-price">{{item.unit_price |number }} VNĐ</li>
                                             <li class="current-price">{{item.promotion_price |number }} VNĐ</li>
-                                            <li class="discount-price">-10%</li>
+                                            <li class="discount-price">-{{((item.unit_price/item.promotion_price)*10).toFixed(2)}}%</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -338,8 +338,8 @@
                         <div class="product-inner-item">
                             <article class="list-product mb-30px">
                                 <div class="img-block">
-                                    <a href="single-product.html" class="thumbnail">
-                                        <img class="first-img" style ="height: 250px;" src= "assets\images\product-image\shoe\{{item.image}}" alt="" />
+                                    <a  routerLink="/detail/{{item.iD_product}}" class="thumbnail">
+                                        <img class="first-img" style ="height: 250px; width:205px;" src= "assets\images\product-image\shoe\{{item.image}}" alt="" />
                                         <!-- <img class="second-img" src="assets/images/product-image/furniture/7.jpg" alt="" /> -->
                                     </a>
                                     <div class="add-to-link">
@@ -376,7 +376,7 @@
                                         <ul>
                                             <li class="old-price">{{item.unit_price |number }} VNĐ</li>
                                             <li class="current-price">{{item.promotion_price |number }} VNĐ</li>
-                                            <li class="discount-price">-10%</li>
+                                            <li class="discount-price">-{{((item.unit_price/item.promotion_price)*10).toFixed(2)}}%</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -409,8 +409,8 @@
                                     <div class="product-inner-item">
                                         <article class="list-product mb-30px">
                                             <div class="img-block">
-                                                <a href="single-product.html" class="thumbnail">
-                                                    <img class="first-img" style ="height: 250px;" src= "assets\images\product-image\shoe\{{item.image}}" alt="" />
+                                                <a  routerLink="/detail/{{item.iD_product}}" class="thumbnail">
+                                                    <img class="first-img" style ="height: 250px; width:205px;" src= "assets\images\product-image\shoe\{{item.image}}" alt="" />
                                                     <!-- <img class="second-img" src="assets/images/product-image/furniture/7.jpg" alt="" /> -->
                                                 </a>
                                                 <div class="add-to-link">
@@ -447,12 +447,11 @@
                                                     <ul>
                                                         <li class="old-price">{{item.unit_price |number }} VNĐ</li>
                                                         <li class="current-price">{{item.promotion_price |number }} VNĐ</li>
-                                                        <li class="discount-price">-10%</li>
+                                                        <li class="discount-price">-{{((item.unit_price/item.promotion_price)*10).toFixed(2)}}%</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </article>
-            
                                     </div>
                                     </ng-container>
             
