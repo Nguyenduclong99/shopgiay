@@ -30,9 +30,11 @@ export class MainComponent extends BaseComponent implements OnInit {
             var d = new Date(b.date).getTime();
             return c - d;
             }).slice(0, 10);
-
+            
           console.log(this.list_item);
           this.adidas = res[0].filter((s) => s.catergory_id == 'ACA02F36-D58A-4779-ACC4-B6E8362385D3').slice(0, 10);
+          // this.adidas.Percent_discount == (this.adidas.unit_price/this.adidas.promotion_price)*10;
+          // console.log("percent_discount:", this.adidas.Percent_discount);
           console.log(this.adidas);
            this.balenciaga = this.list_item.filter((s) => s.catergory_id == "987267D4-8B98-4141-B403-9910939CFDE9").slice(0, 10);
            console.log(this.balenciaga);
