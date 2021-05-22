@@ -13,7 +13,7 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
     super(injector);
   }
   items: any;
-  total: any;
+  total: any; 
   public hoadonForm: FormGroup;
 
   ngOnInit(): void {
