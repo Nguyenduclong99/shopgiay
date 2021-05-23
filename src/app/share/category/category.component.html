@@ -1,172 +1,63 @@
-    <!-- Menu Content Start -->
-    <div class="header-buttom-nav">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-left d-none d-lg-block">
-                    <div class="d-flex align-items-start justify-content-start">
-                        <!-- Beauty Category -->
-                        <div class="beauty-category vertical-menu home-9 home-10">
-                            <h3 class="vertical-menu-heading vertical-menu-toggle">Sản phẩm của chúng tôi</h3>
-                            <ul class="vertical-menu-wrap open-menu-toggle">
-                                <ng-container *ngFor="let i of category">
-                                    <li *ngIf="i.children != null" class="menu-item">
-                                      <a [routerLink]="['/item-list', i.category_id]">{{ i.name }} <i
+<!-- Menu Content Start -->
+<div class="header-buttom-nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-left d-none d-lg-block">
+                <div class="d-flex align-items-start justify-content-start">
+                    <!-- Beauty Category -->
+                    <div class="beauty-category vertical-menu home-9 home-10">
+                        <h3 class="vertical-menu-heading vertical-menu-toggle">Sản phẩm của chúng tôi</h3>
+                        <ul class="vertical-menu-wrap open-menu-toggle">
+                            <ng-container *ngFor="let i of category">
+                                <li *ngIf="i.children != null" class="menu-item">
+                                    <a [routerLink]="['/item-list', i.category_id]">{{ i.name }} <i
                                           class="ion-ios-arrow-right"></i></a>
-                                      <ul class="sub-menu sub-menu-2">
+                                    <ul class="sub-menu sub-menu-2">
                                         <li>
-                                          <ul class="submenu-item">
-                                            <ng-container *ngFor="let c of i.children">
-                                              <li><a routerLink="/item-list/{{c.category_id}}">{{ c.name }}</a></li>
-                                            </ng-container>
-                      
-                                          </ul>
+                                            <ul class="submenu-item">
+                                                <ng-container *ngFor="let c of i.children">
+                                                    <li><a routerLink="/item-list/{{c.category_id}}">{{ c.name }}</a></li>
+                                                </ng-container>
+
+                                            </ul>
                                         </li>
-                                      </ul>
-                                      <!-- sub menu -->
-                                    </li>
-                                    <li class="menu-item" *ngIf="i.children == null"><a
-                                        routerLink="/item-list/{{i.category_id}}">{{ i.name }}</a></li>
-                                  </ng-container>
-                            </ul>
+                                    </ul>
+                                    <!-- sub menu -->
+                                </li>
+                                <li class="menu-item" *ngIf="i.children == null"><a routerLink="/item-list/{{i.category_id}}">{{ i.name }}</a></li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                    <!-- Beauty Category -->
+                    <!--Seach Area Start -->
+                    <div class="header_account_list search_list">
+                        <a href="javascript:void(0)"><i class="ion-ios-search-strong"></i></a>
+                        <div class="dropdown_search">
+                            <form action="#">
+                                <input placeholder="nhập từ khoá tìm kiếm..." type="text" onfocus="myFunction()" onfocusout="myFunction1()" />
+                                <button type=" submit "><i class="ion-ios-search-strong "></i></button>
+                            </form>
                         </div>
-                        <!-- Beauty Category -->
-                        <!--Seach Area Start -->
-                        <div class="header_account_list search_list">
-                            <a href="javascript:void(0)"><i class="ion-ios-search-strong"></i></a>
-                            <div class="dropdown_search">
-                                <form action="#">
-                                    <input placeholder="nhập từ khoá tìm kiếm..." type="text" />
-                                    <div class="search-category">
-                                        <select class="bootstrap-select" name="poscats">
-                                            <option value="0">Tất cả các sản phẩm</option>
-                                            <option value="68">
-                                                Electronics
-                                            </option>
-                                            <option value="69">
-                                                - - Accessories &amp; Parts
-                                            </option>
-                                            <option value="75">
-                                                - - - - Cables &amp; Adapters
-                                            </option>
-                                            <option value="76">
-                                                - - - - Batteries
-                                            </option>
-                                            <option value="77">
-                                                - - - - Chargers
-                                            </option>
-                                            <option value="78">
-                                                - - - - Bags &amp; Cases
-                                            </option>
-                                            <option value="79">
-                                                - - - - Electronic Cigarettes
-                                            </option>
-                                            <option value="70">
-                                                - - Audio &amp; Video
-                                            </option>
-                                            <option value="80">
-                                                - - - - Televisions
-                                            </option>
-                                            <option value="81">
-                                                - - - - TV Receivers
-                                            </option>
-                                            <option value="82">
-                                                - - - - Projectors
-                                            </option>
-                                            <option value="83">
-                                                - - - - Audio Amplifier Boards
-                                            </option>
-                                            <option value="84">
-                                                - - - - TV Sticks
-                                            </option>
-                                            <option value="71">
-                                                - - Camera &amp; Photo
-                                            </option>
-                                            <option value="85">
-                                                - - - - Digital Cameras
-                                            </option>
-                                            <option value="86">
-                                                - - - - Camcorders
-                                            </option>
-                                            <option value="87">
-                                                - - - - Camera Drones
-                                            </option>
-                                            <option value="88">
-                                                - - - - Action Cameras
-                                            </option>
-                                            <option value="89">
-                                                - - - - Photo Studio Supplies
-                                            </option>
-                                            <option value="72">
-                                                - - Portable Audio &amp; Video
-                                            </option>
-                                            <option value="90">
-                                                - - - - Headphones
-                                            </option>
-                                            <option value="91">
-                                                - - - - Speakers
-                                            </option>
-                                            <option value="92">
-                                                - - - - MP3 Players
-                                            </option>
-                                            <option value="93">
-                                                - - - - VR/AR Devices
-                                            </option>
-                                            <option value="94">
-                                                - - - - Microphones
-                                            </option>
-                                            <option value="73">
-                                                - - Smart Electronics
-                                            </option>
-                                            <option value="95">
-                                                - - - - Wearable Devices
-                                            </option>
-                                            <option value="96">
-                                                - - - - Smart Home Appliances
-                                            </option>
-                                            <option value="97">
-                                                - - - - Smart Remote Controls
-                                            </option>
-                                            <option value="98">
-                                                - - - - Smart Watches
-                                            </option>
-                                            <option value="99">
-                                                - - - - Smart Wristbands
-                                            </option>
-                                            <option value="74">
-                                                - - Video Games
-                                            </option>
-                                            <option value="100">
-                                                - - - - Handheld Game Players
-                                            </option>
-                                            <option value="101">
-                                                - - - - Game Controllers
-                                            </option>
-                                            <option value="102">
-                                                - - - - Joysticks
-                                            </option>
-                                            <option value="103">
-                                                - - - - Stickers
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <button type="submit"><i class="ion-ios-search-strong"></i></button>
-                                </form>
+                        <div class="product_table " id="tb">
+                            <div class="row m-0">
+
                             </div>
                         </div>
-                        <!--Seach Area End -->
-                        <!--Contact info Start -->
-                        <div class="contact-link-wrap">
-                            <div class="contact-link">
-                                <div class="phone">
-                                    <p>Hotline:</p>
-                                    <a href="tel:(+800)345678">038678888</a>
-                                </div>
+                    </div>
+                    <!--Seach Area End -->
+                    <!--Contact info Start -->
+                    <div class="contact-link-wrap ">
+                        <div class="contact-link ">
+                            <div class="phone ">
+                                <p>Hotline:</p>
+                                <a href="tel:(+800)345678 ">038678888</a>
                             </div>
-                            <!--Contact info End -->
                         </div>
+                        <!--Contact info End -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Menu Content End -->
+</div>
+<!-- Menu Content End -->

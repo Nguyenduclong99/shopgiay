@@ -60,6 +60,5 @@ export class ItemListComponent extends BaseComponent implements OnInit {
   }
   addToCart(it) {
     this._cart.addToCart(it);
-    alert('Thêm thành công!');
   }
 }

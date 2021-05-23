@@ -29,25 +29,20 @@ export class MainComponent extends BaseComponent implements OnInit {
             var c = new Date(a.date).getTime();
             var d = new Date(b.date).getTime();
             return c - d;
-            }).slice(0, 10);
-            
-          console.log(this.list_item);
-          this.adidas = res[0].filter((s) => s.catergory_id == 'ACA02F36-D58A-4779-ACC4-B6E8362385D3').slice(0, 10);
+            }).slice(0, 8);
+          this.adidas = res[0].filter((s) => s.catergory_id == '2BF5E39C-866E-40B3-B769-A6411AB02FF9').slice(0, 8);
           // this.adidas.Percent_discount == (this.adidas.unit_price/this.adidas.promotion_price)*10;
           // console.log("percent_discount:", this.adidas.Percent_discount);
           console.log(this.adidas);
-           this.balenciaga = this.list_item.filter((s) => s.catergory_id == "987267D4-8B98-4141-B403-9910939CFDE9").slice(0, 10);
-           console.log(this.balenciaga);
+           this.balenciaga = this.list_item.filter((s) => s.catergory_id == "E6337A22-630A-4618-90B6-C4C6A1728FBB").slice(0, 8);
           // setTimeout(() => {
           //   this.loadScripts();
           // });
-          console.log(this.balenciaga);
         },
         (err) => {}
       );
   }
   addToCart(it) {
     this._cart.addToCart(it);
-    alert('Thêm thành công!');
   }
 }
